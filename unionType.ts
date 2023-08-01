@@ -6,14 +6,14 @@ interface Developer {
   name: string;
   skill: string;
 }
-function introduce(someone: Person | Developer) {
+function introduce1(someone: Person | Developer) {
   console.log(someone.age);
   //Developer 형식에 age 속성 없음
   console.log(someone.skill);
   //Person 형식에 skill 속성이 없음
 }
 //in 연산자
-function introduce(someone: Person | Developer) {
+function introduce2(someone: Person | Developer) {
   if ("age" in someone) {
     console.log(someone.age);
     return;
